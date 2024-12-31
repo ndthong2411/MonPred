@@ -1,0 +1,27 @@
+# requirements.txt
+
+# Data Collection
+requests
+beautifulsoup4
+textblob
+
+# Data Storage
+SQLAlchemy
+sqlite3
+
+# Machine Learning
+torch
+pandas
+numpy
+scikit-learn
+
+# Auto Trading
+python-binance
+
+# UI
+streamlit
+
+# Others
+PyYAML
+schedule
+tenacity

@@ -1,0 +1,39 @@
+# config.yaml
+
+# Binance API Configuration
+binance:
+  api_key: 'YOUR_BINANCE_API_KEY'
+  api_secret: 'YOUR_BINANCE_API_SECRET'
+
+# Database Configuration
+database:
+  type: 'sqlite'
+  name: 'trading_data.db'
+
+# Data Collection Configuration
+data_collection:
+  price_interval_seconds: 60  # 1 minute
+  news_collection_interval_seconds: 86400  # 24 hours
+  news_sources:
+    - 'https://www.coindesk.com/'
+    - 'https://cointelegraph.com/'
+
+# Model Configuration
+model:
+  input_size: 11  # 10 lagged closes + sentiment_score
+  hidden_size: 50
+  num_layers: 2
+  output_size: 1
+  learning_rate: 0.001
+  num_epochs: 100
+
+# Auto Trade Configuration
+auto_trade:
+  threshold_buy: 0.7  # Probability above which to buy
+  threshold_sell: 0.3  # Probability below which to sell
+  daily_profit_target: 100  # USD
+  trade_amount_usdt: 50  # USD per trade
+
+# UI Configuration
+ui:
+  port: 8501
