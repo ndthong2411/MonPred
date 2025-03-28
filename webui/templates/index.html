@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Trading Bot Dashboard</title>
+</head>
+<body>
+    <h1>Trading Bot Dashboard</h1>
+    <pre id="state"></pre>
+    <script>
+        async function fetchState() {
+            const response = await fetch('/api/state');
+            const data = await response.json();
+            document.getElementById('state').textContent = JSON.stringify(data, null, 2);
+        }
+        setInterval(fetchState, 2000);
+        fetchState();
+    </script>
+</body>
+</html>
